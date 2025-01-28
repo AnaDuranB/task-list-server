@@ -1,0 +1,28 @@
+# Node.js
+node_modules/    # Dependencias instaladas con npm
+npm-debug.log*   # Logs de errores de npm
+yarn-debug.log*  # Logs de errores de Yarn
+yarn-error.log*  # Logs de errores de Yarn
+
+# Logs generales
+logs/
+*.log
+*.log.*
+
+# Archivos del sistema operativo
+.DS_Store        # MacOS
+Thumbs.db        # Windows
+
+# Entornos
+.env             # Variables de entorno (por seguridad)
+.env.local
+.env.*.local
+
+# IDEs y editores
+.vscode/         # Configuración de VS Code
+.idea/           # Configuración de IntelliJ IDEA/WebStorm
+*.swp            # Archivos temporales de Vim
+
+# Configuración del sistema
+*.bak            # Backups temporales
+*.tmp            # Archivos temporales
