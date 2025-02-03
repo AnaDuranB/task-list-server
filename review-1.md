@@ -11,15 +11,15 @@ Este servidor es ideal para:
 
 # Funcionalidades ✅
 
-1. **Crear tareas nuevas:**
+1. 🗒️ **Crear nuevas tareas.**
     - Los usuarios pueden agregar tareas con una descripción clara y un estado inicial (completada o pendiente).
-2. **Ver todas las tareas:**
+2. 📋 **Ver todas las tareas:**
     - Se pueden listar todas las tareas registradas en el sistema.
-3. **Filtrado de tareas por estado:**
+3. ❔ **Ver todas tus actividades pendientes o completadas.**
     - Es posible visualizar solo las tareas completadas o pendientes.
-4. **Actualizar tareas existentes:**
+4. ✏️ **Actualizar detalles o estados de tus tareas.**
     - Los usuarios pueden modificar el estado o descripción de una tarea existente.
-5. **Eliminar tareas:**
+5. 🗑️ **Eliminar tareas que ya no necesites.**
     - Permite eliminar tareas que ya no sean necesarias.
 
 ---
@@ -48,9 +48,9 @@ Para construir este servidor, utilicé las siguientes tecnologías:
 
 # **Beneficios clave 🏋️**
 
-- **Simplicidad:** Fácil de usar, sin complicaciones técnicas.
-- **Flexibilidad:** Permite gestionar tareas de manera personalizada.
-- **Accesibilidad:** Disponible en cualquier momento y lugar a través de una API.
+- ✅ **Simpleza:** Fácil de usar, sin complicaciones técnicas.
+- ✅ **Flexibilidad:** Permite gestionar tareas de manera personalizada.
+- ✅ **Confiable:** Tus tareas están siempre disponibles y seguras a través de una API.
 
 ---
 
@@ -60,3 +60,5 @@ Para construir este servidor, utilicé las siguientes tecnologías:
 2. Instala las dependencias necesarias con `npm install`, `npm install express`. 
 3. Ejecuta el servidor con `node src/index.js`.
 4. Usa herramientas como Postman para interactuar con la API.
+
+✨ Mytask no es solo un servidor: es tu aliado para ser más productivo. ✨
