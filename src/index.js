@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/api', listViewRouter);
 app.use('/api', listEditRouter);
 
-// Configuración del servidor
+// configuración del servidor
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
