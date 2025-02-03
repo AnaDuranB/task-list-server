@@ -2,23 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 // lista de tareas, datos simulados
-const tasks = [
-  {
-      id: 1,
-      isCompleted: false,
-      description: 'Walk the dog',
-  },
-  {
-      id: 2,
-      isCompleted: false,
-      description: 'Make the bed',
-  }, 
-  {
-      id: 3,
-      isCompleted: false,
-      description: 'Make breakfast',
-  },
-];
+let tasks = require('../data/tasks');
 
 // GET /tasks
 // Retorna todas las tareas
@@ -41,16 +25,9 @@ router.get('/tasks/:id', (req, res) => {
 //GET /tasks/filter/:status
 // Retorna un filtro de tareas completas o incompletas
 router.get('/tasks/filter/:status', (req, res) => {
-  const status = req.params.status;
-  const filteredTasks = tasks.filter(task => {
-    if (status === 'completed') {
-      return task.isCompleted;
-    } else if (status === 'incomplete') {
-      return !task.isCompleted;
-    } else {
-      return false;
-    }
-  });
+  const status = req.params.status === 'completed';
+  const filteredTasks = tasks.filter(t => t.isCompleted === status);
+  res.json(filteredTasks);
 });
 
 
