@@ -5,8 +5,19 @@ const app = express();
 const listViewRouter = require('./routes/list-view-router');
 const listEditRouter = require('./routes/list-edit-router');    
 
-// middle ware para parsear el body de las peticiones, habilita la lectura de JSON en peticiones POST y PUT.
-app.use(express.json());
+const validMethods = ['GET', 'POST', 'PUT', 'DELETE'];
+
+const validateMethod = (req, res, next) => {
+    const { method } = req;
+    if (!validMethods.includes(method)) {
+        return res.status(405).json({ message: 'Method not allowed' });
+    }
+    next();
+};
+
+app.use(validateMethod); //middleware a nivel de aplicación
+
+app.use(express.json()); // middle ware para parsear el body de las peticiones, habilita la lectura de JSON en peticiones POST y PUT.
 
 // implementamos los routers
 app.use('/api', listViewRouter);
