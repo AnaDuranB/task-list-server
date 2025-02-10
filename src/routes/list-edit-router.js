@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+// middleware para validar tareas
 const validateTask = (req, res, next) => {
     const { method, body} = req;
 

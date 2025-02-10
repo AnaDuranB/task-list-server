@@ -17,7 +17,7 @@ const validateMethod = (req, res, next) => {
 
 app.use(validateMethod); //middleware a nivel de aplicación
 
-app.use(express.json()); // middle ware para parsear el body de las peticiones, habilita la lectura de JSON en peticiones POST y PUT.
+app.use(express.json()); // middleware para parsear el body de las peticiones, habilita la lectura de JSON en peticiones POST y PUT.
 
 // implementamos los routers
 app.use('/api', listViewRouter);

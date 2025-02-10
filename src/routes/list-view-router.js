@@ -5,13 +5,13 @@ var router = express.Router();
 const validateParams = (req, res, next) => {
   const { id, status } = req.params;
 
-  // Validar parámetro :id (debe ser un número)
+  // :id (debe ser un número)
   if (id && isNaN(parseInt(id))) {
       return res.status(400).json({ error: "The 'id' parameter must be a valid number" });
   }
 
   const validStatuses = ['completed', 'incomplete'];
-  // Validar parámetro :status (debe ser "completed" o "incomplete")
+  // :status (debe ser "completed" o "incomplete")
   if (status && !validStatuses.includes(status)) {
       return res.status(400).json({ error: "The 'status' parameter must be 'completed' or 'incomplete'" });
   }
