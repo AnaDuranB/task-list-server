@@ -25,7 +25,6 @@ const validateTask = (req, res, next) => {
 
 };
 
-
 // lista de tareas, datos simulados
 let tasks = require('../data/tasks');
 
